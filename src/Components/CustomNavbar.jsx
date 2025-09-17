@@ -13,7 +13,8 @@ const CustomNavbar = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const showBackButton = location.pathname !== "/GeoBravo/";
+  // Con basename, la ruta principal es "/"
+  const showBackButton = location.pathname.startsWith("/GeoBravo/") && location.pathname !== "/GeoBravo/";
 
   return (
     <>
