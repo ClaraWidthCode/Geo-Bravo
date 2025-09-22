@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import CalculadoraView from './pages/CalculadoraView.jsx'
+import Lineal from './Components/GeoGebra/Lineal.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}/>
-        <Route path="/calculadora" element={<CalculadoraView/>}/>
+        <Route path="/" element={<Lineal />}/>
       </Routes>
     </BrowserRouter>
     
