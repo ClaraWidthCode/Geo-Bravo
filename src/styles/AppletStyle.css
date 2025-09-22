@@ -1,0 +1,106 @@
+.title-graphic {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 30px;
+}
+
+@media (max-width: 991px) {
+  .title-graphic {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title-graphic {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .title-graphic {
+    font-size: 20px;
+  }
+}
+.ggb-container {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+.ggb-element {
+  transform: scale(1.002);
+}
+
+.input-graphic {
+  background: #ffff;
+  color: #2c3e50;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-error {
+  border: 1px solid #ffbfc1;
+  box-shadow: 0 0 5px #e54235;
+}
+
+.text-error {
+  color: #e54235;
+}
+
+.button-delete-input {
+  border: none;
+  background: transparent;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.button-delete-input:hover {
+  animation: pendulum 0.5s ease;
+  color: #c0392b;
+}
+
+@keyframes pendulum {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-graphic {
+  color: #f0f0f3 !important;
+  background-color: #2c3e50 !important;
+  padding: 10px !important;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border: none !important;
+}
+
+.button-graphic:hover {
+  color: #2c3e50 !important;
+  background-color: #ffff !important;
+}
+
+.button-add-input {
+  background-color: transparent;
+  border: none;
+  color: #2c3e50;
+  font-weight: 600;
+}
