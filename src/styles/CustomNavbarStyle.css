@@ -1,0 +1,72 @@
+.custom-navbar {
+  padding: 20px 20px !important;
+  border-radius: 20px;
+  background-color: #f0f0f3;
+  z-index: 2 !important;
+  position: relative !important;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+.navbar-brand-custom {
+  font-size: 26px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.navbar-toggle-custom {
+  border: none;
+  background: none;
+}
+.custom-icon {
+  color: #2c3e50 !important;
+  background-color: #f0f0f3 !important;
+  padding: 10px !important;
+  border-radius: 50% !important;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7) !important;
+  transition: transform 0.3s ease !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.custom-icon:hover {
+  transform: scale(1.1) !important;
+}
+
+.custom-icon:focus,
+.custom-icon:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7) !important;
+}
+
+.back-button-container {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    #f4f4f4 100%
+  );
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  width: 100% !important;
+  padding: 30px 0 5px 0;
+}
+
+.back-button {
+  color: #2c3e50 !important;
+  background-color: transparent !important;
+  padding: 10px 20px !important;
+  border-radius: 10% !important;
+  box-shadow: none !important;
+  transition: transform 0.3s ease !important;
+  border: none !important;
+  outline: none !important;
+  font-weight: bold !important;
+}
+
+.back-button:hover {
+  transform: scale(1.05) !important;
+}

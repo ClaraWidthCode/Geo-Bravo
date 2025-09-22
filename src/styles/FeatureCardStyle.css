@@ -1,0 +1,113 @@
+.custom-card {
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  border: none !important;
+  outline: none !important;
+  border-radius: 16px !important;
+  background-color: #f0f0f3;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.15),
+    -12px -12px 20px rgba(255, 255, 255, 0.8);
+}
+
+.custom-card .card-title {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+.custom-card .card-text {
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+.custom-img {
+  border-radius: 16px !important;
+}
+
+/* Ajustes para pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+  .custom-card {
+    height: 500px !important;
+  }
+  .custom-card .card-title {
+    font-size: 18px;
+  }
+  .custom-card .card-text {
+    font-size: 14px;
+  }
+  .custom-img {
+    height: 330px;
+  }
+}
+
+/* Ajustes para pantallas grandes (entre 992px y 1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .custom-card {
+    height: 420px !important; /* Altura para pantallas grandes */
+  }
+  .custom-card .card-title {
+    font-size: 18px; /* Tamaño para pantallas grandes */
+  }
+  .custom-card .card-text {
+    font-size: 14px; /* Tamaño para pantallas grandes */
+  }
+  .custom-img {
+    height: 250px; /* Altura para pantallas grandes */
+  }
+}
+
+/* Ajustes para pantallas medianas (entre 768px y 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-card {
+    height: 300px; /* Altura para tabletas */
+  }
+  .custom-card .card-title {
+    font-size: 15px; /* Tamaño para tabletas */
+  }
+  .custom-card .card-text {
+    font-size: 10px; /* Tamaño para tabletas */
+  }
+  .custom-img {
+    height: 180px; /* Altura para tabletas */
+  }
+}
+
+/* Ajustes para pantallas pequeñas (entre 576px y 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .custom-card {
+    height: 280px; /* Altura para dispositivos móviles pequeños */
+  }
+  .custom-card .card-title {
+    font-size: 15px; /* Tamaño para dispositivos móviles pequeños */
+  }
+  .custom-card .card-text {
+    font-size: 12px; /* Tamaño para dispositivos móviles pequeños */
+  }
+  .custom-img {
+    height: 220px; /* Altura para dispositivos móviles pequeños */
+  }
+}
+
+/* Ajustes para móviles (menos de 576px) */
+@media (max-width: 575px) {
+  .custom-card {
+    height: 260px; /* Altura para móviles */
+  }
+  .custom-card .card-title {
+    font-size: 18px; /* Tamaño para móviles */
+  }
+  .custom-card .card-text {
+    font-size: 14px; /* Tamaño para móviles */
+  }
+  .custom-img {
+    height: 330px; /* Altura para móviles */
+  }
+}
