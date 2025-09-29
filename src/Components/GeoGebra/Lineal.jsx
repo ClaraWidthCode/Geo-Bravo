@@ -22,10 +22,6 @@ const Lineal = () => {
     );
   };
 
-  const isLinearFunction = (func) => {
-    const linearRegex = /^[+-]?\d*x([+-]\d+)?$/;
-    return linearRegex.test(func.replace(/\s+/g, ""));
-  };
 
   const handleButtonClick = () => {
     if (ggbApplet) {
@@ -34,15 +30,8 @@ const Lineal = () => {
         setInputs((prevInputs) =>
           prevInputs.map((input) => {
             if (input.value) {
-              if (isLinearFunction(input.value)) {
-                appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
-                return { ...input, error: "" };
-              } else {
-                return {
-                  ...input,
-                  error: "Por favor, ingresa una función lineal.",
-                };
-              }
+              appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
+              return { ...input, error: "" };
             }
             return input;
           })
@@ -97,9 +86,8 @@ const Lineal = () => {
                 <Row className="align-items-center">
                   <Col xs={inputs.length > 1 ? 10 : 12}>
                     <div
-                      className={`input-graphic w-100 ${
-                        input.error ? "input-error" : ""
-                      }`}
+                      className={`input-graphic w-100 ${input.error ? "input-error" : ""
+                        }`}
                     >
                       <MathInput
                         setValue={(value) =>
@@ -125,11 +113,7 @@ const Lineal = () => {
                 {input.error && <div className="text-error">{input.error}</div>}
               </Col>
             ))}
-            <Col xs={12} className="d-flex justify-content-start mb-3">
-              <button onClick={handleAddInput} className="button-add-input">
-                <FaRegPlusSquare size={25} /> Añadir otra función
-              </button>
-            </Col>
+
             <Col xs={12} className="mb-3">
               <button
                 onClick={handleButtonClick}
