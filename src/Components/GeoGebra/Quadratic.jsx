@@ -21,7 +21,6 @@ const Quadratic = () => {
     );
   };
 
-  
 
   const handleButtonClick = () => {
     if (ggbApplet) {
