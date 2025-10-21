@@ -21,6 +21,11 @@ const Quadratic = () => {
     );
   };
 
+  const isQuadraticFunction = (func) => {
+    const terms = func.replace(/\s+/g, "").split(/(?=[+-])/);
+    const hasQuadraticTerm = terms.some(term => /x\^2/.test(term));
+    return hasQuadraticTerm && terms.every(term => /^[+-]?\d*x?(\^2)?$/.test(term));
+  };
 
   const handleButtonClick = () => {
     if (ggbApplet) {
@@ -29,8 +34,15 @@ const Quadratic = () => {
         setInputs((prevInputs) =>
           prevInputs.map((input) => {
             if (input.value) {
-              appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
-              return { ...input, error: "" };
+              if (isQuadraticFunction(input.value)) {
+                appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
+                return { ...input, error: "" };
+              } else {
+                return {
+                  ...input,
+                  error: "Por favor, ingresa una función cuadrática.",
+                };
+              }
             }
             return input;
           })
@@ -114,7 +126,9 @@ const Quadratic = () => {
               </Col>
             ))}
             <Col xs={12} className="d-flex justify-content-start mb-3">
-              
+              <button onClick={handleAddInput} className="button-add-input">
+                <FaRegPlusSquare size={25} /> Añadir otra función
+              </button>
             </Col>
             <Col xs={12} className="mb-3">
               <button

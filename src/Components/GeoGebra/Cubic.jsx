@@ -36,8 +36,15 @@ const Cubic = () => {
         setInputs((prevInputs) =>
           prevInputs.map((input) => {
             if (input.value) {
-              appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
-              return { ...input, error: "" };
+              if (isCubicFunction(input.value)) {
+                appletObject.evalCommand(`f${input.id}(x)=${input.value}`);
+                return { ...input, error: "" };
+              } else {
+                return {
+                  ...input,
+                  error: "Por favor, ingresa una función cúbica.",
+                };
+              }
             }
             return input;
           })
@@ -121,6 +128,9 @@ const Cubic = () => {
               </Col>
             ))}
             <Col xs={12} className="d-flex justify-content-start mb-3">
+              <button onClick={handleAddInput} className="button-add-input">
+                <FaRegPlusSquare size={25} /> Añadir otra función
+              </button>
             </Col>
             <Col xs={12} className="mb-3">
               <button
